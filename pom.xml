@@ -26,7 +26,7 @@
     <description>REST interface for openVALIDATION.</description>
     <url>https://www.openvalidation.io</url>
     <packaging>jar</packaging>
-    <version>0.0.4</version>
+    <version>0.0.4_SNAPSHOT</version>
     <licenses>
         <license>
             <name>Apache License 2.0</name>
@@ -35,13 +35,11 @@
         </license>
     </licenses>
 
-
     <scm>
         <connection>scm:git:git://github.com/openvalidation/openvalidation-rest.git</connection>
         <developerConnection>scm:git:ssh://github.com:openvalidation/openvalidation-rest.git</developerConnection>
         <url>https://github.com/openvalidation/openvalidation-rest</url>
     </scm>
-
 
     <developers>
         <developer>
@@ -54,7 +52,7 @@
         </developer>
         <developer>
             <name>Silas Bischoff</name>
-            <email>silas.bischoff@googlemail.com</email>
+            <email>contact@sbischoff.dev</email>
         </developer>
         <developer>
             <name>Benjamin Richter</name>
@@ -89,9 +87,6 @@
         <maven-plugin-version>1.0.0</maven-plugin-version>
         <skipTests>false</skipTests>
     </properties>
-
-
-
 
     <dependencies>
         <dependency>
