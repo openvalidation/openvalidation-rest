@@ -70,6 +70,7 @@ public class GenerationResultDTO {
     this.setImplementationResult(ovResult.getImplementationCodeContent());
 
     ASTModel ast = ovResult.getASTModel();
+
     if (ast != null) {
       this.setVariableNames(LINQ.select(ast.getVariables(), v -> v.getName()));
       this.setStaticStrings(
@@ -85,13 +86,12 @@ public class GenerationResultDTO {
                           && r.getAction() instanceof ASTActionError),
               r -> ((ASTActionError) r.getAction()).getErrorMessage()));
     }
-  } // TODO: verbose
+  }
 
   public List<OpenValidationException> getErrors() {
     return errors;
   }
 
-  // TODO nested Class public oder setter entfernen
   public void setErrors(List<OpenValidationException> errors) {
     this.errors = errors;
   }
