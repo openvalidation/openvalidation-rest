@@ -46,6 +46,10 @@ public class GenerationResultDTO {
   @JsonInclude(JsonInclude.Include.NON_EMPTY)
   private List<String> variableNames;
 
+  @JsonAlias("sem_operator_names")
+  @JsonInclude(JsonInclude.Include.NON_EMPTY)
+  private List<String> semOperatorNames;
+
   @JsonAlias("static_strings")
   @JsonInclude(JsonInclude.Include.NON_EMPTY)
   private List<String> staticStrings;
@@ -73,6 +77,7 @@ public class GenerationResultDTO {
 
     if (ast != null) {
       this.setVariableNames(LINQ.select(ast.getVariables(), v -> v.getName()));
+      this.setSemanticOperatorNames(ast.getSemanticOperatorNames());
       this.setStaticStrings(
           LINQ.select(ast.collectItemsOfType(ASTOperandStaticString.class), s -> s.getValue()));
 
@@ -134,5 +139,13 @@ public class GenerationResultDTO {
 
   public void setRuleErrors(List<String> ruleErrors) {
     this.ruleErrors = ruleErrors;
+  }
+
+  public List<String> getSemanticOperatorNames() {
+    return semOperatorNames;
+  }
+
+  public void setSemanticOperatorNames(List<String> semOperatorNames) {
+    this.semOperatorNames = semOperatorNames;
   }
 }
