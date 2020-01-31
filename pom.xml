@@ -261,7 +261,7 @@
             <snapshots><enabled>true</enabled></snapshots>
         </repository>
     </repositories>
-
+-->
     <profiles>
         <profile>
             <id>release</id>
@@ -320,6 +320,5 @@
             </build>
         </profile>
     </profiles>
-	-->
 
 </project>
